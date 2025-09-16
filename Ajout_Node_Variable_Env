@@ -1,0 +1,72 @@
+⚙️ Ajouter Node.js au PATH sous Linux
+1. Vérifier l’installation
+
+Si tu as installé Node.js via un package manager (ex : apt, yum, snap), il est généralement déjà dans ton PATH.
+Teste avec :
+
+node -v
+npm -v
+
+
+Si la commande renvoie command not found, il faut ajouter Node manuellement.
+
+2. Localiser Node.js
+
+Trouve où Node est installé :
+
+which node
+
+
+Par exemple, tu peux obtenir :
+
+/usr/bin/node (installation via apt)
+
+/usr/local/bin/node (installation manuelle)
+
+~/node/bin/node (installation locale via nvm ou compilation)
+
+3. Modifier le fichier de configuration du shell
+
+Selon ton shell (bash, zsh, fish), modifie le bon fichier de config :
+
+Bash : ~/.bashrc ou ~/.bash_profile
+
+Zsh : ~/.zshrc
+
+Fish : ~/.config/fish/config.fish
+
+Ajoute la ligne suivante (remplace /chemin/vers/node/bin par le bon chemin) :
+
+export PATH=$PATH:/chemin/vers/node/bin
+
+
+Exemple classique si Node est dans /usr/local/bin :
+
+export PATH=$PATH:/usr/local/bin
+
+4. Recharger la configuration
+
+Recharge ton fichier de config pour appliquer les changements :
+
+source ~/.bashrc   # ou ~/.zshrc selon ton shell
+
+5. Vérification
+
+Teste à nouveau :
+
+node -v
+npm -v
+
+
+Tu devrais maintenant voir les versions correctement.
+
+🚀 Astuce : Utiliser nvm (Node Version Manager)
+
+Si tu changes souvent de version Node, utilise nvm :
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+source ~/.bashrc
+nvm install --lts
+
+
+👉 nvm gère automatiquement le PATH pour toi, et permet de basculer entre plusieurs versions Node facilement.
