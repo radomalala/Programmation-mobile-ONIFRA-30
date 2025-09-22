@@ -98,12 +98,6 @@ Ouvrir app-debug.apk et cliquer sur Installer.
 
 Lancer l’application → un message Hello Kotlin avec VS Code 🚀 s’affiche.
 
-👨‍🏫 Auteur
-
-Radomalala RATRIMOSOA EUGENE
-Cours ONIFRA INFOL3 – Programmation Mobile
-
----
 
 ## 👨‍🏫 Auteur
 **Radomalala RATRIMOSOA EUGENE**  
